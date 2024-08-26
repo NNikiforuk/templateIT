@@ -1,0 +1,107 @@
+@import "../../index.scss";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    a {
+        color: $white;
+        font-weight: bold;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+        height: 5em;
+        padding: 1em;
+
+        .logo {
+            color: $white;
+            font-weight: bold;
+        }
+
+        &__menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: .2em;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+
+        .bar {
+            background-color: $neon;
+            width: 40px;
+            height: 5px;
+            display: block;
+            margin: .3em;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            border-radius: 8px;
+        }
+
+        &.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        &.active .bar:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        &.active .bar:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+
+    .navbar__menu {
+        position: absolute;
+        flex-direction: column;
+        gap: 0;
+        top: 5em;
+        left: -100%;
+        text-align: start;
+        width: 100%;
+        transition: 0.7s ease-in-out;
+        background-color: $gray;
+        padding: 1em;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+
+        li {
+            margin: 1em 0;
+        }
+
+        &.active {
+            left: 0;
+            border-radius: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .header .navbar  {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .hamburger {
+            display: none;
+        }
+
+        &__menu {
+            gap: 2em;
+
+            li a:hover {
+                color: $neon;
+            }
+        }
+    }
+}
