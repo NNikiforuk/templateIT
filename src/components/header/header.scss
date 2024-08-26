@@ -1,7 +1,6 @@
 @import "../../index.scss";
 
 .header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -9,7 +8,9 @@
     &__banner {
         background-color: $neon-white;
         color: $black;
-        padding: 1.5em 1em;
+        padding: 1em 1.5em 3em 1.5em;
+        margin: 0 .5em;
+        border-radius: 16px;
 
         .steps {
             display: flex;
@@ -60,12 +61,19 @@
 
 @media screen and (min-width: 400px) {
     .header .header__banner  {
-        padding-bottom: 3em;
+        max-width: 400px;
+        margin: 0 auto;
 
         .steps {
             flex-direction: row;
             gap: 3em;
             margin-bottom: 2em;
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header .header__banner  {
+        max-width: 700px;
     }
 }

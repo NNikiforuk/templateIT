@@ -1,5 +1,7 @@
 import "./App.scss";
 import Header from "./components/header/Header";
+import Price from "./components/sections/Price";
+import Whatsthat from "./components/sections/Whatsthat";
 
 {
 	/* <a href="https://vitejs.dev" target="_blank">
@@ -11,6 +13,8 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
+			<Price />
+			<Whatsthat />
 		</div>
 	);
 }

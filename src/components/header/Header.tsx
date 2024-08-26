@@ -7,7 +7,8 @@ const Header = () => {
 		<header className="header">
 			<Navigation />
 			<div className="header__banner">
-				<h1>Customize your own plan</h1>
+				<h1>Start healthy habits</h1>
+				<h2>with our customizable templates</h2>
 				<div className="steps">
 					<div className="step">
 						<div className="step__circle"></div>
