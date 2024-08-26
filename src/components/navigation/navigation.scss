@@ -9,6 +9,7 @@
     a {
         color: $white;
         font-weight: bold;
+        text-transform: uppercase;
     }
 
     .navbar {
@@ -29,6 +30,14 @@
             justify-content: space-between;
             align-items: center;
             gap: .2em;
+
+            .cta {
+                background-color: $neon;
+                padding: .5em 1em;
+                color: $black;
+                border-radius: 16px;
+                border: 3px solid $white;
+            }
         }
     }
 }

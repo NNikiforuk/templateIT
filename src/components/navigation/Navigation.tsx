@@ -20,12 +20,12 @@ const Navigation = () => {
 				</a>
 				<ul className={`navbar__menu ${isActive ? "active" : ""}`}>
 					<li onClick={removeActive}>
-						<a href="#home" className="navLink">
+						<a href="#home" className="nav__link">
 							Home
 						</a>
 					</li>
 					<li onClick={removeActive}>
-						<a href="/lets-go" className="navLink">
+						<a href="/lets-go" className="nav__link cta">
 							Let's go!
 						</a>
 					</li>
