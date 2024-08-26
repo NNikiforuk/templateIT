@@ -8,7 +8,7 @@
     &__banner {
         background-color: $neon-white;
         color: $black;
-        padding: 1em 1.5em 3em 1.5em;
+        padding: 3em .5em;
         margin: 0 .5em;
         border-radius: 16px;
 
@@ -16,7 +16,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             padding: 2em 0;
             gap: 1em;
             margin-bottom: 1em;
@@ -40,16 +39,16 @@
 
                 &__circle:nth-of-type(1) {
                     background-color: $black;
-                    left: -2.2em;
+                    top: -1.5em;
                 }
 
                 &__circle:nth-of-type(2) {
                     background-color: $neon-white;
-                    left: -2em;
+                    top: -1.3em;
                 }
 
                 &__square {
-                    background-color: $black-secondary;
+                    background-color: $black;
                     color: $white;
                     padding: 1em;
                     border-radius: 16px;
@@ -61,7 +60,6 @@
 
 @media screen and (min-width: 400px) {
     .header .header__banner  {
-        max-width: 400px;
         margin: 0 auto;
 
         .steps {
@@ -72,8 +70,8 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    .header .header__banner  {
-        max-width: 700px;
+@media screen and (min-width: 1200px) {
+    .header {
+        width: 1000px;
     }
 }

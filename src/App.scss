@@ -1,5 +1,55 @@
+@import "./index.scss";
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+}
+
+.price {
+  color: $white;
+
+  &__desc {
+    padding: 1.5em 0;
+  }
+}
+
+.what {
+  &__list {
+    padding: 1.5em 0;
+    text-align: left;
+    list-style-type: disc;
+    margin-left: 2em;
+
+    li {
+      line-height: 2em;
+    }
+  }
+
+  &__examples {
+    padding-bottom: 1.5em;
+
+    .gray {
+      background-color: $gray;
+    }
+  }
+
+  &__interested {
+    padding-bottom: 2em;
+    text-align: right;
+  }
+}
+
+.footer {
+  padding: 6em 0 2em 1em;
+  text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+  .what .what__list {
+    margin-left: 4em;
+  }
+
+    .what .what__examples {
+      padding: 2em 0;
+    }
 }
