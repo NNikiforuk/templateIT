@@ -1,10 +1,12 @@
 @import "../../index.scss";
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    height: 5em;
+    padding: 1em;
 
     a {
         color: $white;
@@ -12,32 +14,23 @@
         text-transform: uppercase;
     }
 
-    .navbar {
+    .logo {
+        color: $white;
+        font-weight: bold;
+    }
+
+    &__menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2em;
-        height: 5em;
-        padding: 1em;
+        gap: .2em;
 
-        .logo {
-            color: $white;
-            font-weight: bold;
-        }
-
-        &__menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: .2em;
-
-            .cta {
-                background-color: $neon;
-                padding: .5em 1em;
-                color: $black;
-                border-radius: 16px;
-                border: 3px solid $white;
-            }
+        .cta {
+            background-color: $neon;
+            padding: .5em 1em;
+            color: $black;
+            border-radius: 16px;
+            border: 3px solid $white;
         }
     }
 }
@@ -97,8 +90,8 @@
 }
 
 @media screen and (min-width: 400px) {
-    .header .navbar  {
-        max-width: 1200px;
+    .navbar {
+        max-width: 1280px;
         margin: 0 auto;
 
         .hamburger {
@@ -108,8 +101,15 @@
         &__menu {
             gap: 2em;
 
-            li a:hover {
-                color: $neon;
+            li {
+                a:hover {
+                    color: $neon;
+                }
+
+                .cta:hover {
+                    background-color: $neon-secondary;
+                    color: $black;
+                }
             }
         }
     }

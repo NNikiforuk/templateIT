@@ -1,5 +1,5 @@
 import "./App.scss";
-import Navigation from "./components/navigation/Navigation";
+import Header from "./components/header/Header";
 
 {
 	/* <a href="https://vitejs.dev" target="_blank">
@@ -10,7 +10,7 @@ import Navigation from "./components/navigation/Navigation";
 function App() {
 	return (
 		<div className="App">
-			<Navigation />
+			<Header />
 		</div>
 	);
 }
