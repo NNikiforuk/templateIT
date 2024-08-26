@@ -12,7 +12,7 @@ const Button = ({ text, pulse, border }: ButtonProps) => {
 			className={`btn ${pulse ? "btn-pulse" : ""} ${
 				border ? "btn-border" : ""
 			}`}
-			href="/lets-go"
+			href="/create"
 		>
 			{text}
 		</a>

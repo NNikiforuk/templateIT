@@ -24,7 +24,7 @@ const Navigation = () => {
 					</a>
 				</li>
 				<li onClick={removeActive}>
-					<a href="/lets-go" className="nav__link cta">
+					<a href="/create" className="nav__link cta">
 						Let's go!
 					</a>
 				</li>
