@@ -1,5 +1,3 @@
-import "./button.scss";
-
 type ButtonProps = {
 	text: string;
 	pulse?: boolean;
