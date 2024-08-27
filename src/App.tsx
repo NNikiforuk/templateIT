@@ -1,8 +1,7 @@
-import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navigation from "./components/navigation/Navigation";
 import Home from "./components/pages/Home";
 import Create from "./components/pages/create";
+import Navigation from "./components/navigation/Navigation";
 
 {
 	/* <a href="https://vitejs.dev" target="_blank">
@@ -19,7 +18,7 @@ function App() {
 					<Route path="/" element={<Home />}></Route>
 					<Route path="/create" element={<Create />}></Route>
 				</Routes>
-				<footer className="footer">@{new Date().getFullYear()}</footer>
+				{/* <footer className="footer">@{new Date().getFullYear()}</footer> */}
 			</Router>
 		</div>
 	);

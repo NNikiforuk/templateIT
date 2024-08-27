@@ -5,7 +5,7 @@ import "./home.scss";
 const Home = () => {
 	return (
 		<div className="home">
-			<Header homepage={true} />
+			<Header />
 			<main>
 				<section className="price">
 					<h2>Price</h2>
