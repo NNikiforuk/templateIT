@@ -21,6 +21,10 @@ const Create = () => {
 		window.print();
 	};
 
+	const handleAddingTask = () => {
+		
+	}
+
 	return (
 		<main className="create">
 			<div className="pdf">
@@ -47,7 +51,7 @@ const Create = () => {
 
 				<div className="pdf__btns">
 					<div className="add__task">
-						<button>+</button>
+						<button onClick={handleAddingTask}>+</button>
 					</div>
 					<div className="generate__pdf">
 						<button className="btn" onClick={handlePrint}>

@@ -13,7 +13,7 @@ type TaskProps = {
 
 const Task = ({ formData, handleChange }: TaskProps) => {
 	return (
-		<form className="pdf__form">
+		<form className="form">
 			<div className="day day1">1</div>
 			<div className="day day2">2</div>
 			<div className="day day3">3</div>

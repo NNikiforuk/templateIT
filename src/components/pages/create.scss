@@ -41,104 +41,6 @@
             }
         }
 
-        &__form {
-            display: grid;
-            grid-template-columns: repeat(9, 1fr);
-            grid-template-rows: 1fr 1fr 1fr;
-            margin-top: 5em;
-            text-align: center;
-            place-items: center;
-
-            .day {
-                font-weight: bold;
-                width: 50px;
-            }
-
-            .day1 {
-                grid-area: 1 / 2 / 1 / 2;
-            }
-
-            .day2 {
-                grid-area: 1 / 3 / 1 / 3;
-            }
-
-            .day3 {
-                grid-area: 1 / 4 / 1 / 4;
-            }
-
-            .day4 {
-                grid-area: 1 / 5 / 1 / 5;
-            }
-
-            .day5 {
-                grid-area: 1 / 6 / 1 / 6;
-            }
-
-            .day6 {
-                grid-area: 1 / 7 / 1 / 7;
-            }
-
-            .day7 {
-                grid-area: 1 / 8 / 1 / 8;
-            }
-
-            .task__name,
-            .goal {
-                font-weight: bold;
-                line-height: 45px;
-                text-align: center;
-            }
-
-            .task__name {
-                grid-area: 2 / 1 / 2 / 1;
-            }
-
-            .blank {
-                width: 45px;
-                height: 45px;
-                text-align: center;
-            }
-
-            .blank,
-            input {
-                border-radius: 8px;
-                border: 1.5px solid $black;
-                background-color: $white;
-            }
-
-            .blank1 {
-                grid-area: 2 / 2 / 2 / 2;
-            }
-
-            .blank2 {
-                grid-area: 2 / 3 / 2 / 3;
-            }
-
-            .blank3 {
-                grid-area: 2 / 4 / 2 / 4;
-            }
-
-            .blank4 {
-                grid-area: 2 / 5 / 2 / 5;
-            }
-
-            .blank5 {
-                grid-area: 2 / 6 / 2 / 6;
-            }
-
-            .blank6 {
-                grid-area: 2 / 7 / 2 / 7;
-            }
-
-            .blank7 {
-                grid-area: 2 / 8 / 2 / 8;
-            }
-
-            .goal {
-                grid-area: 2 / 9 / 2 / 9;
-            }
-        }
-
         &__btns {
             display: flex;
             align-items: center;
@@ -165,7 +67,7 @@
                     background-color: transparent;
                     color: $white;
                     font-weight: bold;
-                    font-size: 2em;
+                    font-size: 3em;
                     border: none;
                     transition: .5s;
                 }
