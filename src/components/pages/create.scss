@@ -12,31 +12,6 @@
     display: flex;
     flex-direction: column;
 
-    .howto {
-        border-top: 1px solid $gray;
-        color: $white;
-        padding: 2em;
-        text-align: left;
-
-        &__list {
-            margin-top: 1em;
-            padding-left: 3em;
-
-            .underline {
-                text-decoration: underline;
-            }
-
-            li {
-                line-height: 40px;
-            }
-
-            ul {
-                padding-left: 2em;
-                list-style: disc;
-            }
-        }
-    }
-
     .pdf {
         display: inline-block;
         position: relative;
@@ -161,6 +136,53 @@
 
             .goal {
                 grid-area: 2 / 9 / 2 / 9;
+            }
+        }
+
+        &__btns {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3em;
+
+            button {
+                cursor: pointer;
+            }
+
+            .add__task {
+                background-color: $black;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: .5s;
+
+                button {
+                    background-color: transparent;
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 2em;
+                    border: none;
+                    transition: .5s;
+                }
+
+                button:hover {
+                    color: white;
+                }
+            }
+
+            .add__task:hover {
+                background-color: black;
+            }
+
+            .generate__pdf {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
             }
         }
     }
