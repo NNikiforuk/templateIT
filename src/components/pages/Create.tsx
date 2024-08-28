@@ -22,6 +22,43 @@ const Create = () => {
 
 	return (
 		<main className="create">
+			<div className="howto">
+				<h2>How to use it?</h2>
+				<ol className="howto__list">
+					<li className="bold underline">Fill the form below</li>
+					<ul>
+						<li>
+							<span className="bold">Document title: </span>write down your
+							document title. For example "Summer trainings"
+						</li>
+						<li>
+							<span className="bold">Date: </span>current date or any other time
+							period
+						</li>
+						<li>
+							<span className="bold">1-7: </span>days of week
+						</li>
+						<li>
+							<span className="bold">Task name: </span>your task name. For
+							example "deadlifts", "skin care", "journalism"
+						</li>
+						<li>
+							<span className="bold">7 blank spaces: </span>leave them empty
+						</li>
+						<li>
+							<span className="bold">Goal: </span>set your goal for the current
+							task. For example "20x3" (as 20x3 deadlifts)
+						</li>
+					</ul>
+					<li className="bold underline">Print it</li>
+					<li className="bold underline">
+						Do the task and fill the blank space
+					</li>
+					<li className="bold underline">
+						Enjoy building your own healthy habits
+					</li>
+				</ol>
+			</div>
 			<div className="pdf">
 				<div className="pdf__data">
 					<input
