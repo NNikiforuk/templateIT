@@ -65,6 +65,7 @@
             flex-direction: column;
             justify-content: center;
             gap: 3em;
+            margin-top: 3em;
 
             button {
                 cursor: pointer;
@@ -127,5 +128,10 @@
     .pdf {
         margin: 0;
         overflow: hidden;
+
+        .no__print {
+            display: none;
+        }
     }
+
 }

@@ -105,3 +105,9 @@ section {
     width: 800px;
   }
 }
+
+@media print {
+  .no__print {
+    display: none;
+  }
+}

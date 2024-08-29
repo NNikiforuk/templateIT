@@ -13,7 +13,7 @@ const Navigation = () => {
 	};
 
 	return (
-		<nav className="navbar">
+		<nav className="navbar no__print">
 			<a href="#home" className="logo">
 				LOGO
 			</a>

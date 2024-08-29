@@ -90,7 +90,7 @@ const Create = () => {
 					<Task key={task.id} task={task} onTaskChange={handleTaskChange} />
 				))}
 
-				<div className="pdf__btns">
+				<div className="pdf__btns no__print">
 					<div className="add__task">
 						<button onClick={handleAddingNewTask}>+</button>
 					</div>
