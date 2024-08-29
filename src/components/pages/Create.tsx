@@ -74,6 +74,18 @@ const Create = () => {
 					/>
 				</div>
 
+				<div className="pdf__days">
+					<div className="day0"></div>
+					<div className="day">1</div>
+					<div className="day">2</div>
+					<div className="day">3</div>
+					<div className="day">4</div>
+					<div className="day">5</div>
+					<div className="day">6</div>
+					<div className="day">7</div>
+					<div className="day0"></div>
+				</div>
+
 				{formData.map((task) => (
 					<Task key={task.id} task={task} onTaskChange={handleTaskChange} />
 				))}
