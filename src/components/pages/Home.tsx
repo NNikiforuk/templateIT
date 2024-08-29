@@ -35,7 +35,7 @@ const Home = () => {
 						</span>
 					</div>
 					<div className="what__interested bold">Interested?</div>
-					<Button text="START" border="white" />
+					<Button text="Go to generator" border="white" />
 				</section>
 			</main>
 		</div>

@@ -24,7 +24,7 @@ const Header = () => {
 						<div className="step__square">print</div>
 					</div>
 				</div>
-				<Button text="START" pulse={true} />
+				<Button text="Go to creator" pulse={true} />
 			</div>
 		</header>
 	);
