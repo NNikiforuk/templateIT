@@ -8,7 +8,7 @@ type FormDataProps = {
 	goal: string;
 };
 
-type InputName = 'taskName' | 'goal';
+type InputName = "taskName" | "goal";
 
 const Create = () => {
 	const [title, setTitle] = useState("");
@@ -36,13 +36,17 @@ const Create = () => {
 		]);
 	};
 
-	const handleTaskChange = (id: number, inputName: InputName, value: string) => {
-    setFormData((prevFormData) =>
-      prevFormData.map((task) =>
-        task.id === id ? { ...task, [inputName]: value } : task
-      )
-    );
-  };
+	const handleTaskChange = (
+		id: number,
+		inputName: InputName,
+		value: string
+	) => {
+		setFormData((prevFormData) =>
+			prevFormData.map((task) =>
+				task.id === id ? { ...task, [inputName]: value } : task
+			)
+		);
+	};
 
 	return (
 		<main className="create">
