@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type ButtonProps = {
 	text: string;
 	pulse?: boolean;
@@ -6,14 +8,14 @@ type ButtonProps = {
 
 const Button = ({ text, pulse, border }: ButtonProps) => {
 	return (
-		<a
+		<Link
 			className={`btn ${pulse ? "btn-pulse" : ""} ${
 				border ? "btn-border" : ""
 			}`}
-			href="/create"
+			to="/create"
 		>
 			{text}
-		</a>
+		</Link>
 	);
 };
 

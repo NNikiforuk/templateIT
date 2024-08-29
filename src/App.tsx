@@ -12,7 +12,9 @@ function App() {
 					<Route index element={<Home />}></Route>
 					<Route path="create" element={<Create />}></Route>
 				</Routes>
-				<footer className="footer">@{new Date().getFullYear()} Template IT</footer>
+				<footer className="footer no__print">
+					@{new Date().getFullYear()} Template IT
+				</footer>
 			</Router>
 		</div>
 	);
