@@ -9,8 +9,8 @@ function App() {
 			<Router>
 				<Navigation />
 				<Routes>
-					<Route path="/" element={<Home />}></Route>
-					<Route path="/create" element={<Create />}></Route>
+					<Route index element={<Home />}></Route>
+					<Route path="create" element={<Create />}></Route>
 				</Routes>
 				<footer className="footer">@{new Date().getFullYear()} Template IT</footer>
 			</Router>

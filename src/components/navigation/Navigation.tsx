@@ -1,17 +1,18 @@
 import "./navigation.scss";
 import logo from "../../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
 	return (
 		<nav className="navbar no__print">
-			<a href="/" className="navbar__logo">
+			<Link to="/" className="navbar__logo">
 				<img src={logo} alt="site logo" width={100} height={30} />
-			</a>
+			</Link>
 			<ul className="navbar__menu">
 				<li>
-					<a href="/create" className="nav__link cta">
+					<Link to="/create" className="nav__link cta">
 						Let's go!
-					</a>
+					</Link>
 				</li>
 			</ul>
 		</nav>
