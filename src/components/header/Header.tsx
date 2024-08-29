@@ -6,7 +6,7 @@ const Header = () => {
 		<header className="header">
 			<div className="header__banner">
 				<h1>Start healthy habits</h1>
-				<h2>with our customizable templates</h2>
+				<h2>with our customizable A4 templates</h2>
 				<div className="steps">
 					<div className="step">
 						<div className="step__circle"></div>
@@ -16,7 +16,7 @@ const Header = () => {
 					<div className="step">
 						<div className="step__circle"></div>
 						<div className="step__circle">2</div>
-						<div className="step__square">write</div>
+						<div className="step__square">fill it</div>
 					</div>
 					<div className="step">
 						<div className="step__circle"></div>

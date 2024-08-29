@@ -6,124 +6,29 @@
     align-items: center;
     gap: 2em;
     height: 5em;
-    padding: 1em;
-    width: 90vw;
+    margin: 0 .5em;
+    padding: 1em 0;
 
-    a {
-        color: $white;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    .logo {
-        color: $white;
-        font-weight: bold;
-    }
-
-    &__menu {
+    &__logo img {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: .2em;
-
-        .cta {
-            background-color: $neon;
-            padding: .5em 1em;
-            color: $black;
-            border-radius: 16px;
-            border: 3px solid $white;
-        }
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .hamburger {
-        display: block;
-        cursor: pointer;
-
-        .bar {
-            background-color: $neon;
-            width: 40px;
-            height: 5px;
-            display: block;
-            margin: .3em;
-            -webkit-transition: 0.3s ease-in-out;
-            transition: 0.3s ease-in-out;
-            border-radius: 8px;
-        }
-
-        &.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        &.active .bar:nth-child(1) {
-            transform: translateY(10px) rotate(45deg);
-        }
-
-        &.active .bar:nth-child(3) {
-            transform: translateY(-10px) rotate(-45deg);
-        }
+        justify-content: center;
     }
 
-    .navbar__menu {
-        position: absolute;
-        flex-direction: column;
-        gap: 0;
-        top: 5em;
-        left: -100%;
-        text-align: start;
-        width: 100%;
-        transition: 0.7s ease-in-out;
-        background-color: $gray;
-        padding: 1em;
-        border-top-right-radius: 16px;
-        border-bottom-right-radius: 16px;
-
-        li {
-            margin: 1em 0;
-        }
-
-        &.active {
-            left: 0;
-            border-radius: 0;
-        }
-    }
-}
-
-@media screen and (min-width: 400px) {
-    .navbar {
-        margin: 0 auto;
-        padding: 1em 0;
-
-        .hamburger {
-            display: none;
-        }
-
-        &__menu {
-            gap: 2em;
-
-            li {
-
-                a,
-                .cta {
-                    transition: .5s;
-                }
-
-                a:hover {
-                    color: $neon;
-                }
-
-                .cta:hover {
-                    background-color: $neon-secondary;
-                    color: $red;
-                }
-            }
-        }
+    &__menu .cta {
+        background-color: $neon;
+        text-transform: uppercase;
+        padding: .5em 1em;
+        color: $black;
+        border-radius: 16px;
+        border: 3px solid $white;
+        font-weight: bold;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .navbar {
-        width: 60vw;
+        width: 1000px;
+        margin: 0;
     }
 }

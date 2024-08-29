@@ -1,42 +1,19 @@
-import { useState } from "react";
 import "./navigation.scss";
+import logo from "../../assets/logo.svg";
 
 const Navigation = () => {
-	const [isActive, setIsActive] = useState(false);
-
-	const toggleActiveClass = () => {
-		setIsActive(!isActive);
-	};
-
-	const removeActive = () => {
-		setIsActive(false);
-	};
-
 	return (
 		<nav className="navbar no__print">
-			<a href="#home" className="logo">
-				LOGO
+			<a href="/" className="navbar__logo">
+				<img src={logo} alt="site logo" width={100} height={30} />
 			</a>
-			<ul className={`navbar__menu ${isActive ? "active" : ""}`}>
-				<li onClick={removeActive}>
-					<a href="#home" className="nav__link">
-						Home
-					</a>
-				</li>
-				<li onClick={removeActive}>
+			<ul className="navbar__menu">
+				<li>
 					<a href="/create" className="nav__link cta">
 						Let's go!
 					</a>
 				</li>
 			</ul>
-			<div
-				className={`hamburger ${isActive ? "active" : ""}`}
-				onClick={toggleActiveClass}
-			>
-				<span className="bar"></span>
-				<span className="bar"></span>
-				<span className="bar"></span>
-			</div>
 		</nav>
 	);
 };
