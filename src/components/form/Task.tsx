@@ -15,6 +15,7 @@ type TaskProps = {
 };
 
 const Task = ({ task, onTaskChange }: TaskProps) => {
+    
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const inputName = e.target.name as InputName;
 		const value = e.target.value;
