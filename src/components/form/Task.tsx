@@ -1,17 +1,26 @@
 import { ChangeEvent } from "react";
 import "./task.scss";
 
-type TaskProps = {
-	formData: {
-		title: string;
-		date: string;
-		taskName: string;
-		goal: string;
-	};
-	handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+type TaskData = {
+	id: number;
+	taskName: string;
+	goal: string;
 };
 
-const Task = ({ formData, handleChange }: TaskProps) => {
+type InputName = "taskName" | "goal";
+
+type TaskProps = {
+	task: TaskData;
+	onTaskChange: (id: number, inputName: InputName, value: string) => void;
+};
+
+const Task = ({ task, onTaskChange }: TaskProps) => {
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+		const inputName = e.target.name as InputName;
+		const value = e.target.value;
+		onTaskChange(task.id, inputName, value);
+	};
+
 	return (
 		<form className="form">
 			<div className="day day1">1</div>
@@ -25,7 +34,7 @@ const Task = ({ formData, handleChange }: TaskProps) => {
 				className="task__name"
 				type="text"
 				name="taskName"
-				value={formData.taskName}
+				value={task.taskName}
 				onChange={handleChange}
 				placeholder="Task name"
 			/>
@@ -40,7 +49,7 @@ const Task = ({ formData, handleChange }: TaskProps) => {
 				className="goal"
 				type="text"
 				name="goal"
-				value={formData.goal}
+				value={task.goal}
 				onChange={handleChange}
 				placeholder="Goal"
 			/>

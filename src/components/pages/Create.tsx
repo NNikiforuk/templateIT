@@ -2,28 +2,47 @@ import { ChangeEvent, useState } from "react";
 import "./create.scss";
 import Task from "../form/Task";
 
-const Create = () => {
-	const [formData, setFormData] = useState({
-		title: "",
-		date: "",
-		taskName: "",
-		goal: "",
-	});
+type FormDataProps = {
+	id: number;
+	taskName: string;
+	goal: string;
+};
 
-	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-		setFormData({
-			...formData,
-			[e.target.name]: e.target.value,
-		});
-	};
+type InputName = 'taskName' | 'goal';
+
+const Create = () => {
+	const [title, setTitle] = useState("");
+	const [date, setDate] = useState("");
+	const [formData, setFormData] = useState<FormDataProps[]>([
+		{
+			id: 1,
+			taskName: "",
+			goal: "",
+		},
+	]);
 
 	const handlePrint = () => {
 		window.print();
 	};
 
-	const handleAddingTask = () => {
-		
-	}
+	const handleAddingNewTask = () => {
+		setFormData((prevFormData) => [
+			...prevFormData,
+			{
+				id: prevFormData.length + 1,
+				taskName: "",
+				goal: "",
+			},
+		]);
+	};
+
+	const handleTaskChange = (id: number, inputName: InputName, value: string) => {
+    setFormData((prevFormData) =>
+      prevFormData.map((task) =>
+        task.id === id ? { ...task, [inputName]: value } : task
+      )
+    );
+  };
 
 	return (
 		<main className="create">
@@ -33,25 +52,31 @@ const Create = () => {
 						className="title"
 						type="text"
 						name="title"
-						value={formData.title}
-						onChange={(e: any) => handleChange(e)}
+						value={title}
+						onChange={(e: ChangeEvent<HTMLInputElement>) =>
+							setTitle(e.target.value)
+						}
 						placeholder="Document title"
 					/>
 					<input
 						className="date"
 						type="text"
 						name="date"
-						value={formData.date}
-						onChange={(e: any) => handleChange(e)}
+						value={date}
+						onChange={(e: ChangeEvent<HTMLInputElement>) =>
+							setDate(e.target.value)
+						}
 						placeholder="Date"
 					/>
 				</div>
 
-				<Task formData={formData} handleChange={handleChange} />
+				{formData.map((task) => (
+					<Task key={task.id} task={task} onTaskChange={handleTaskChange} />
+				))}
 
 				<div className="pdf__btns">
 					<div className="add__task">
-						<button onClick={handleAddingTask}>+</button>
+						<button onClick={handleAddingNewTask}>+</button>
 					</div>
 					<div className="generate__pdf">
 						<button className="btn" onClick={handlePrint}>
