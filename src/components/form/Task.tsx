@@ -23,7 +23,7 @@ const Task = ({ task, onTaskChange }: TaskProps) => {
 	};
 
 	return (
-		<form className="form">
+		<div className="task">
 			<input
 				className="task__name"
 				type="text"
@@ -47,7 +47,7 @@ const Task = ({ task, onTaskChange }: TaskProps) => {
 				onChange={handleChange}
 				placeholder="Goal"
 			/>
-		</form>
+		</div>
 	);
 };
 

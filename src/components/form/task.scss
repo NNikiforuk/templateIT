@@ -1,11 +1,12 @@
 @import "../../index.scss";
 
-.form {
+.task {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1em;
 
-    .task__name,
+    &__name,
     .goal {
         font-weight: bold;
         line-height: 45px;
