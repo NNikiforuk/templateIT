@@ -86,9 +86,11 @@ const Create = () => {
 					<div className="day0"></div>
 				</div>
 
-				{formData.map((task) => (
-					<Task key={task.id} task={task} onTaskChange={handleTaskChange} />
-				))}
+				<form>
+					{formData.map((task) => (
+						<Task key={task.id} task={task} onTaskChange={handleTaskChange} />
+					))}
+				</form>
 
 				<div className="pdf__btns no__print">
 					<div className="add__task">
