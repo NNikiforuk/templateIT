@@ -1,10 +1,12 @@
 import Button from "../button/Button";
 import Header from "../header/Header";
+import Navigation from "../navigation/Navigation";
 import "./home.scss";
 
 const Home = () => {
 	return (
 		<div className="home">
+			<Navigation page="home" />
 			<Header />
 			<main>
 				<section className="price">

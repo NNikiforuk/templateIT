@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import "./create.scss";
 import Task from "../form/Task";
+import Navigation from "../navigation/Navigation";
 
 type FormDataProps = {
 	id: number;
@@ -50,6 +51,7 @@ const Create = () => {
 
 	return (
 		<main className="create">
+			<Navigation />
 			<div className="pdf">
 				<div className="pdf__data">
 					<input

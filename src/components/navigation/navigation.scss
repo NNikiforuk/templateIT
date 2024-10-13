@@ -15,14 +15,21 @@
         justify-content: center;
     }
 
-    &__menu .cta {
-        background-color: $neon;
-        text-transform: uppercase;
-        padding: .5em 1em;
-        color: $black;
-        border-radius: 16px;
-        border: 3px solid $white;
-        font-weight: bold;
+    &__menu {
+        .cta {
+            background-color: $neon;
+            text-transform: uppercase;
+            padding: .5em 1em;
+            color: $black;
+            border-radius: 16px;
+            border: 3px solid $white;
+            font-weight: bold;
+            transition: .6s;
+        }
+
+        .cta:hover {
+            background-color: $neon-secondary;
+        }
     }
 }
 
