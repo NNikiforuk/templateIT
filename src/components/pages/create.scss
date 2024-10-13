@@ -92,9 +92,18 @@
                 }
             }
 
+            .add__task-disabled {
+                background-color: gray;
+            }
+
             .add__task:hover {
                 background-color: black;
                 box-shadow: 0px 0px 5px black;
+            }
+
+            .add__task-disabled:hover {
+                background-color: gray;
+                box-shadow: none;
             }
 
             .generate__pdf {

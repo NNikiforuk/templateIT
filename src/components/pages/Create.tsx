@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import "./create.scss";
 import Task from "../form/Task";
 import Navigation from "../navigation/Navigation";
@@ -14,6 +14,7 @@ type InputName = "taskName" | "goal";
 const Create = () => {
 	const [title, setTitle] = useState("");
 	const [date, setDate] = useState("");
+	const [disableButton, setDisableButton] = useState(false);
 	const [formData, setFormData] = useState<FormDataProps[]>([
 		{
 			id: 1,
@@ -35,7 +36,21 @@ const Create = () => {
 				goal: "",
 			},
 		]);
+
+		if (formData.length === 10) {
+			setDisableButton(true);
+		} else {
+			setDisableButton(false);
+		}
 	};
+
+	useEffect(() => {
+		if (formData.length >= 10) {
+			setDisableButton(true);
+		} else {
+			setDisableButton(false);
+		}
+	}, [disableButton]);
 
 	const handleTaskChange = (
 		id: number,
@@ -95,8 +110,10 @@ const Create = () => {
 				</form>
 
 				<div className="pdf__btns no__print">
-					<div className="add__task">
-						<button onClick={handleAddingNewTask}>+</button>
+					<div className={`add__task ${disableButton && "add__task-disabled"}`}>
+						<button disabled={disableButton} onClick={handleAddingNewTask}>
+							+
+						</button>
 					</div>
 					<div className="generate__pdf">
 						<button className="btn" onClick={handlePrint}>
