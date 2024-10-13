@@ -69,3 +69,28 @@
         margin: 0;
     }
 }
+
+@media screen and (min-width: 2560px) {
+    .header .header__banner {
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        .steps {
+            padding: 4em 0;
+            gap: 2em;
+            margin-bottom: 0;
+
+            .step {
+                &__circle {
+                    font-size: 1.7rem;
+                }
+
+                &__square {
+                    padding: 1.5em;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}

@@ -39,3 +39,17 @@
         margin: 0;
     }
 }
+
+@media screen and (min-width: 2560px) {
+    .navbar {
+        height: 7em;
+
+        &__logo img {
+            width: 150px;
+        }
+
+        &__menu .cta {
+            font-size: 1.7rem;
+        }
+    }
+}
